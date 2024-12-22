@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Chess/src/hdmi_text_controller.h&apos; to &apos;graphics.h&apos;" description="Rename resource &apos;hdmi_text_controller.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/hdmi_text_controller.h" name="graphics.h" stamp="1732504229605" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Chess/src/lw_usb_main.c&apos; to &apos;driver.c&apos;" description="Rename resource &apos;lw_usb_main.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/lw_usb_main.c" name="driver.c" stamp="1732504240175" updateReferences="true"/>
+</session>

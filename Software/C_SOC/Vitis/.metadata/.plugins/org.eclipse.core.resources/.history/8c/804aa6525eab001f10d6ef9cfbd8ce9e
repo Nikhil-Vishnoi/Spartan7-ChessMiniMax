@@ -1,0 +1,203 @@
+#include <stdio.h>
+#include "platform.h"
+#include "lw_usb/GenericMacros.h"
+#include "lw_usb/GenericTypeDefs.h"
+#include "lw_usb/MAX3421E.h"
+#include "lw_usb/USB.h"
+#include "lw_usb/usb_ch9.h"
+#include "lw_usb/transfer.h"
+#include "lw_usb/HID.h"
+#include "sleep.h"
+
+#include "xparameters.h"
+#include <xgpio.h>
+#include "graphics.h"
+
+extern HID_DEVICE hid_device;
+
+static XGpio Gpio_hex;
+
+static BYTE addr = 1; 				//hard-wired USB address
+const char* const devclasses[] = { " Uninitialized", " HID Keyboard", " HID Mouse", " Mass storage" };
+
+
+BYTE GetDriverandReport() {
+	BYTE i;
+	BYTE rcode;
+	BYTE device = 0xFF;
+	BYTE tmpbyte;
+
+	DEV_RECORD* tpl_ptr;
+	xil_printf("Reached USB_STATE_RUNNING (0x40)\n");
+	for (i = 1; i < USB_NUMDEVICES; i++) {
+		tpl_ptr = GetDevtable(i);
+		if (tpl_ptr->epinfo != NULL) {
+			xil_printf("Device: %d", i);
+			xil_printf("%s \n", devclasses[tpl_ptr->devclass]);
+			device = tpl_ptr->devclass;
+		}
+	}
+	//Query rate and protocol
+	rcode = XferGetIdle(addr, 0, hid_device.interface, 0, &tmpbyte);
+	if (rcode) {   //error handling
+		xil_printf("GetIdle Error. Error code: ");
+		xil_printf("%x \n", rcode);
+	} else {
+		xil_printf("Update rate: ");
+		xil_printf("%x \n", tmpbyte);
+	}
+	xil_printf("Protocol: ");
+	rcode = XferGetProto(addr, 0, hid_device.interface, &tmpbyte);
+	if (rcode) {   //error handling
+		xil_printf("GetProto Error. Error code ");
+		xil_printf("%x \n", rcode);
+	} else {
+		xil_printf("%d \n", tmpbyte);
+	}
+	return device;
+}
+
+void printHex (u32 data, unsigned channel)
+{
+	XGpio_DiscreteWrite (&Gpio_hex, channel, data);
+}
+
+int main() {
+    init_platform();
+    /** Graphics information **/
+
+	// 0xff refers to draw the background color
+	// Everything else will just be telling us what color to make it
+	// 100 pixel defined mouse graphic
+
+	uint8_t mousePixel[20*10] = { 0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0x11, 0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0x11, 0x11, 0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0x11, 0x11, 0x11, 0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0x11, 0x11, 0x11, 0x11, 0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0x11, 0x11, 0x11, 0x11, 0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0x11, 0x11, 0x11, 0x11, 0x11, 0xff,  0xff,  0xff,  0xff,  0xff,  0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0xff,  0xff,  0xff,  0xff,  0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0xff,  0xff,  0xff,  0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0xff,  0xff,  0xff,  0x11, 0x11, 0x11, 0x11, 0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0x11, 0x11, 0x11, 0x11, 0x11, 0xff,  0xff,  0xff,  0xff,  0xff,  0x11, 0xff,  0xff,  0x11, 0x11, 0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0x11, 0x11, 0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0x11, 0x11, 0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0x11, 0x11, 0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff,  0xff };
+
+
+	BYTE rcode;
+	BOOT_MOUSE_REPORT buf;
+
+	BYTE runningdebugflag = 0;//flag to dump out a bunch of information when we first get to USB_STATE_RUNNING
+	BYTE errorflag = 0; //flag once we get an error device so we don't keep dumping out state info
+	BYTE device;
+
+	xil_printf("initializing MAX3421E...\n");
+	MAX3421E_init();
+	xil_printf("initializing USB...\n");
+	USB_init();
+
+	createGrid();
+	refreshScreen(); }
+	int x = 0;
+	int y = 0;
+	int clicked = 0; // If the mouse is clicking on a square or something
+	while (1) {
+		int ynew;
+		int xnew;
+
+		// Chess Game Handling State Machine
+
+
+
+
+		// USB Handling
+		MAX3421E_Task();
+		USB_Task();
+		if (GetUsbTaskState() == USB_STATE_RUNNING) {
+			if (!runningdebugflag) {
+				runningdebugflag = 1;
+				device = GetDriverandReport();
+			} else if (device == 2) {
+				rcode = mousePoll(&buf);
+				if (rcode == hrNAK) {
+					//NAK means no new data
+					continue;
+				} else if (rcode) {
+					xil_printf("Rcode: ");
+					xil_printf("%x \n", rcode);
+					clicked = 1;
+					continue;
+				}
+				// Handles the player Mouse.
+				xnew = x + (signed char)buf.Xdispl;
+				ynew = y +  (signed char)buf.Ydispl;
+				xil_printf("Coordinate (%d,%d)\t",xnew,ynew);
+
+				if (xnew < 0) {
+					xnew = 0;
+				}
+				if (xnew > 480) {
+					if(buf.Xdispl > 0)
+						xnew = 480;
+					else
+						xnew = 0;
+				}
+
+
+				if (ynew < 0) {
+					ynew = 0;
+				}
+				if (ynew > 480) {
+					if(buf.Ydispl > 0)
+						ynew = 480;
+					else
+						ynew = 0;
+				}
+
+			}
+		} else if (GetUsbTaskState() == USB_STATE_ERROR) {
+
+			if (!errorflag) {
+				errorflag = 1;
+				xil_printf("USB Error State\n");
+				//print out string descriptor here
+			}
+		} else //not in USB running state
+		{
+
+			xil_printf("USB task state: ");
+			xil_printf("%x\n", GetUsbTaskState());
+			if (runningdebugflag) {	//previously running, reset USB hardware just to clear out any funky state, HS/FS etc
+				runningdebugflag = 0;
+				MAX3421E_init();
+				USB_init();
+			}
+			errorflag = 0;
+		}
+		/***** Updating the Mouse graphic and handling any clicking logic  *****/
+		// Delete old mouse
+		for (int xp = x; xp < x + 30; xp+=2) {
+			for (int yp = y; yp < y + 30; yp++) {
+				if ( (((xp/60)%2 == 1) && ((yp/60)%2 == 0)) || (((xp/60)%2 == 0) && ((yp/60)%2 == 1)) )
+					setPixels(xp,yp,0x55);
+				else if ( (((xp/60)%2 == 1) && ((yp/60)%2 == 1)) || (((xp/60)%2 == 0) && ((yp/60)%2 == 0)) )
+					setPixels(xp,yp,0x33);
+			}
+		}
+		x = xnew;
+		y = ynew;
+		if (x > 470)
+			x = 470;
+		if (x < 0)
+			x = 0;
+		if (y > 470)
+			y = 470;
+		if (y < 0)
+			y = 0;
+		xil_printf("Coordinate (%d,%d)\n",x,y);
+
+		drawObject(x,y,20,20,mousePixel);
+//		drawObject(x,y,20,20,mousePixel);
+		// Draw new mouse
+//		for (int xp = x; xp < x + 20; xp+=2) {
+//			for (int yp = y; yp < y + 20; yp++) {
+//				if (mousePixel[(xp-x)/2+(yp-y)*20] == 0xff) {
+//					// Transparent Pixel
+//				}else
+//					setPixels(xp,yp,mousePixel[(xp-x)/2+(yp-y)*20]);
+//			}
+//		}
+
+	}
+    cleanup_platform();
+	return 0;
+}

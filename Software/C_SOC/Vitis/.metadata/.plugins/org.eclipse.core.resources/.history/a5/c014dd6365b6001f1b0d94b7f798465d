@@ -1,0 +1,36 @@
+#ifndef BOARD
+#define BOARD
+#include "../graphics.h"
+#include <stdbool.h>
+
+
+enum piece {
+    w_pawn = -2,
+    w_queen = -3,
+    w_knight = -4,
+    w_bishop = -5,
+    w_king = -6,
+    w_rook = -7,
+
+    b_pawn = 6,
+    b_queen = 7,
+    b_knight = 8,
+    b_bishop = 9,
+    b_king = 10,
+    b_rook = 11,
+};
+
+void resetBoard(int *pos);
+void displayBoard(int *pos);
+void redrawCube(int y,int c, int *pos);
+
+struct tempboard{
+	int positions[8*8];
+	int score;
+};
+
+void getMoves(int c,int r,int * board,int * movebuffer, bool wrookl, bool wrook2, bool brook1, bool brook2, int lastmove);
+int getMovesPawn(int c,int r,int * board,int * movebuffer, bool white, int lastmove);
+bool legalMove(int * movebuffer,int selected);
+int position(int c, int r);
+#endif

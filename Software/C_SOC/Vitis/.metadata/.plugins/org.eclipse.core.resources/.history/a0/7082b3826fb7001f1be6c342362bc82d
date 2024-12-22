@@ -1,0 +1,7 @@
+#ifndef MINIMAX
+#define MINIMAX
+
+#include "board.h"
+#include <stdbool.h>
+
+#endif

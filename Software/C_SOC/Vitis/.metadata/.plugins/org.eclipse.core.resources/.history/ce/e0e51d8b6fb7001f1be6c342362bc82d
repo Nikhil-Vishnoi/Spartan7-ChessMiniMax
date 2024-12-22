@@ -1,0 +1,14 @@
+#ifndef MINIMAX
+#define MINIMAX
+
+#include "board.h"
+#include <stdbool.h>
+
+
+// ALWAYS PLAYS AS BLACK
+int* play(int* board);
+
+// Returns score
+int minimax(int *board, int* move, int depth, bool white);
+
+#endif

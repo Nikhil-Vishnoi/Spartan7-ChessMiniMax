@@ -1,0 +1,27 @@
+#include "../graphics.h"
+
+
+enum piece {
+    w_pawn = 0,
+    w_queen = 1,
+    w_knight = 2,
+    w_bishop = 3,
+    w_king = 4,
+    w_rook = 5,
+
+    b_pawn = 6,
+    b_queen = 7,
+    b_knight = 8,
+    b_bishop = 9,
+    b_king = 10,
+    b_rook = 11,
+};
+
+void resetBoard();
+void displayBoard();
+void redrawCube(int y,int c);
+
+struct tempboard{
+	int positions[8*8] ,
+	int score
+};

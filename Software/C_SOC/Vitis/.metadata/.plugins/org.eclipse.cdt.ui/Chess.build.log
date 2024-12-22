@@ -1,0 +1,151 @@
+14:26:08 **** Incremental Build of configuration Debug for project Chess ****
+make all 
+'Building file: ../src/driver.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/driver.o" -IC:/Chess/Vitis/ChessHardware/export/ChessHardware/sw/ChessHardware/standalone_microblaze_0/bspinclude/include -mno-xl-reorder -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/driver.d" -MT"src/driver.o" -o "src/driver.o" "../src/driver.c"
+In file included from C:/Chess/Vitis/ChessHardware/export/ChessHardware/sw/ChessHardware/standalone_microblaze_0/bspinclude/include/xil_printf.h:16,
+                 from C:/Chess/Vitis/ChessHardware/export/ChessHardware/sw/ChessHardware/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Chess/Vitis/ChessHardware/export/ChessHardware/sw/ChessHardware/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/driver.c:10:
+C:/Chess/Vitis/ChessHardware/export/ChessHardware/sw/ChessHardware/standalone_microblaze_0/bspinclude/include/xparameters.h:687:50: warning: initialization of 'volatile struct TEXT_HDMI_STRUCT *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  687 | #define XPAR_HDMI_TEXT_CONTROLLER_0_AXI_BASEADDR 0x41C40000
+      |                                                  ^~~~~~~~~~
+../src/graphics.h:22:54: note: in expansion of macro 'XPAR_HDMI_TEXT_CONTROLLER_0_AXI_BASEADDR'
+   22 | static volatile struct TEXT_HDMI_STRUCT* hdmi_ctrl = XPAR_HDMI_TEXT_CONTROLLER_0_AXI_BASEADDR;
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../src/driver.c:14:
+../src/graphics.h:23:35: warning: initialization of 'volatile uint8_t *' {aka 'volatile unsigned char *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   23 | static volatile uint8_t* buffer = 0x40020000;
+      |                                   ^~~~~~~~~~
+In file included from C:/Chess/Vitis/ChessHardware/export/ChessHardware/sw/ChessHardware/standalone_microblaze_0/bspinclude/include/xil_printf.h:16,
+                 from C:/Chess/Vitis/ChessHardware/export/ChessHardware/sw/ChessHardware/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Chess/Vitis/ChessHardware/export/ChessHardware/sw/ChessHardware/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/driver.c:10:
+C:/Chess/Vitis/ChessHardware/export/ChessHardware/sw/ChessHardware/standalone_microblaze_0/bspinclude/include/xparameters.h:597:29: warning: initialization of 'volatile uint8_t *' {aka 'volatile unsigned char *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  597 | #define XPAR_CLICK_BASEADDR 0x40030000
+      |                             ^~~~~~~~~~
+../src/driver.c:25:35: note: in expansion of macro 'XPAR_CLICK_BASEADDR'
+   25 | static volatile uint8_t* button = XPAR_CLICK_BASEADDR;
+      |                                   ^~~~~~~~~~~~~~~~~~~
+C:/Chess/Vitis/ChessHardware/export/ChessHardware/sw/ChessHardware/standalone_microblaze_0/bspinclude/include/xparameters.h:621:31: warning: initialization of 'volatile uint8_t *' {aka 'volatile unsigned char *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  621 | #define XPAR_PLAYER2_BASEADDR 0x40060000
+      |                               ^~~~~~~~~~
+../src/driver.c:26:36: note: in expansion of macro 'XPAR_PLAYER2_BASEADDR'
+   26 | static volatile uint8_t* MiniMax = XPAR_PLAYER2_BASEADDR; // Switch 0 Default true
+      |                                    ^~~~~~~~~~~~~~~~~~~~~
+C:/Chess/Vitis/ChessHardware/export/ChessHardware/sw/ChessHardware/standalone_microblaze_0/bspinclude/include/xparameters.h:613:36: warning: initialization of 'volatile uint8_t *' {aka 'volatile unsigned char *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  613 | #define XPAR_PLAYER1BLACK_BASEADDR 0x40050000
+      |                                    ^~~~~~~~~~
+../src/driver.c:27:45: note: in expansion of macro 'XPAR_PLAYER1BLACK_BASEADDR'
+   27 | static volatile uint8_t* MiniMaxPlayWhite = XPAR_PLAYER1BLACK_BASEADDR;// Switch 1
+      |                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Chess/Vitis/ChessHardware/export/ChessHardware/sw/ChessHardware/standalone_microblaze_0/bspinclude/include/xparameters.h:605:31: warning: initialization of 'volatile uint8_t *' {aka 'volatile unsigned char *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  605 | #define XPAR_NEWGAME_BASEADDR 0x40040000
+      |                               ^~~~~~~~~~
+../src/driver.c:28:36: note: in expansion of macro 'XPAR_NEWGAME_BASEADDR'
+   28 | static volatile uint8_t* newGame = XPAR_NEWGAME_BASEADDR;
+      |                                    ^~~~~~~~~~~~~~~~~~~~~
+../src/driver.c: In function 'main':
+../src/driver.c:655:68: warning: passing argument 5 of 'drawObject' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  655 |                                         drawObject(c*60,r*30,60,60,promo_graphics,0x11);
+      |                                                                    ^~~~~~~~~~~~~~
+In file included from ../src/driver.c:14:
+../src/graphics.h:31:63: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'const uint8_t *' {aka 'const unsigned char *'}
+   31 | void drawObject(int x, int y, int width, int height, uint8_t* data, uint8_t color);
+      |                                                      ~~~~~~~~~^~~~
+../src/driver.c:658:68: warning: passing argument 5 of 'drawObject' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  658 |                                         drawObject(c*60,r*30,60,60,promo_graphics,0x11);
+      |                                                                    ^~~~~~~~~~~~~~
+In file included from ../src/driver.c:14:
+../src/graphics.h:31:63: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'const uint8_t *' {aka 'const unsigned char *'}
+   31 | void drawObject(int x, int y, int width, int height, uint8_t* data, uint8_t color);
+      |                                                      ~~~~~~~~~^~~~
+../src/driver.c:663:68: warning: passing argument 5 of 'drawObject' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  663 |                                         drawObject(c*60,r*30,60,60,promo_graphics,0x66);
+      |                                                                    ^~~~~~~~~~~~~~
+In file included from ../src/driver.c:14:
+../src/graphics.h:31:63: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'const uint8_t *' {aka 'const unsigned char *'}
+   31 | void drawObject(int x, int y, int width, int height, uint8_t* data, uint8_t color);
+      |                                                      ~~~~~~~~~^~~~
+../src/driver.c:666:68: warning: passing argument 5 of 'drawObject' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  666 |                                         drawObject(c*60,r*30,60,60,promo_graphics,0x66);
+      |                                                                    ^~~~~~~~~~~~~~
+In file included from ../src/driver.c:14:
+../src/graphics.h:31:63: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'const uint8_t *' {aka 'const unsigned char *'}
+   31 | void drawObject(int x, int y, int width, int height, uint8_t* data, uint8_t color);
+      |                                                      ~~~~~~~~~^~~~
+../src/driver.c:974:70: warning: passing argument 5 of 'drawObject' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  974 |                                                 drawObject(x,y,20,20,mousePixel,0x22);
+      |                                                                      ^~~~~~~~~~
+In file included from ../src/driver.c:14:
+../src/graphics.h:31:63: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'const uint8_t *' {aka 'const unsigned char *'}
+   31 | void drawObject(int x, int y, int width, int height, uint8_t* data, uint8_t color);
+      |                                                      ~~~~~~~~~^~~~
+../src/driver.c:1008:102: warning: passing argument 5 of 'drawObject' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 1008 |                                                         drawObject(selected%8*60,selected/8*30,60,60,promo_graphics,0x11);
+      |                                                                                                      ^~~~~~~~~~~~~~
+In file included from ../src/driver.c:14:
+../src/graphics.h:31:63: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'const uint8_t *' {aka 'const unsigned char *'}
+   31 | void drawObject(int x, int y, int width, int height, uint8_t* data, uint8_t color);
+      |                                                      ~~~~~~~~~^~~~
+../src/driver.c:1011:102: warning: passing argument 5 of 'drawObject' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 1011 |                                                         drawObject(selected%8*60,selected/8*30,60,60,promo_graphics,0x66);
+      |                                                                                                      ^~~~~~~~~~~~~~
+In file included from ../src/driver.c:14:
+../src/graphics.h:31:63: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'const uint8_t *' {aka 'const unsigned char *'}
+   31 | void drawObject(int x, int y, int width, int height, uint8_t* data, uint8_t color);
+      |                                                      ~~~~~~~~~^~~~
+../src/driver.c:125:14: warning: variable 'firsttime' set but not used [-Wunused-but-set-variable]
+  125 |         bool firsttime = true;
+      |              ^~~~~~~~~
+../src/driver.c:121:13: warning: variable 'ypast' set but not used [-Wunused-but-set-variable]
+  121 |         int ypast = 0;
+      |             ^~~~~
+../src/driver.c:120:13: warning: variable 'xpast' set but not used [-Wunused-but-set-variable]
+  120 |         int xpast = 0;
+      |             ^~~~~
+../src/driver.c:119:13: warning: variable 'screen' set but not used [-Wunused-but-set-variable]
+  119 |         int screen = 1;
+      |             ^~~~~~
+../src/driver.c:118:13: warning: variable 'y2' set but not used [-Wunused-but-set-variable]
+  118 |         int y2 = 0;
+      |             ^~
+../src/driver.c:117:13: warning: variable 'y1' set but not used [-Wunused-but-set-variable]
+  117 |         int y1 = 0;
+      |             ^~
+../src/driver.c:116:13: warning: variable 'x2' set but not used [-Wunused-but-set-variable]
+  116 |         int x2 = 0;
+      |             ^~
+../src/driver.c:115:13: warning: variable 'x1' set but not used [-Wunused-but-set-variable]
+  115 |         int x1 = 0;
+      |             ^~
+../src/driver.c:100:17: warning: unused variable 'b2' [-Wunused-variable]
+  100 |         uint8_t b2[20*20];
+      |                 ^~
+../src/driver.c:99:17: warning: unused variable 'b1' [-Wunused-variable]
+   99 |         uint8_t b1[20*20];
+      |                 ^~
+In file included from ../src/driver.c:14:
+At top level:
+../src/graphics.h:23:26: warning: 'buffer' defined but not used [-Wunused-variable]
+   23 | static volatile uint8_t* buffer = 0x40020000;
+      |                          ^~~~~~
+../src/graphics.h:22:42: warning: 'hdmi_ctrl' defined but not used [-Wunused-variable]
+   22 | static volatile struct TEXT_HDMI_STRUCT* hdmi_ctrl = XPAR_HDMI_TEXT_CONTROLLER_0_AXI_BASEADDR;
+      |                                          ^~~~~~~~~
+'Finished building: ../src/driver.c'
+' '
+'Building target: Chess.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Chess/Vitis/ChessHardware/export/ChessHardware/sw/ChessHardware/standalone_microblaze_0/bsplib/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Chess.elf"  ./src/lw_usb/HID.o ./src/lw_usb/MAX3421E.o ./src/lw_usb/transfer.o  ./src/chess/MiniMax.o ./src/chess/board.o  ./src/driver.o ./src/graphics.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Chess.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Chess.elf  |tee "Chess.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  94480	    856	  35400	 130736	  1feb0	Chess.elf
+'Finished building: Chess.elf.size'
+' '
+
+14:26:09 Build Finished (took 932ms)
+
