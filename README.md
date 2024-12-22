@@ -25,5 +25,29 @@ MiniMax:
 The Minimax algorithm uses the board.c helper functions to create a moveTree with a variable depth ( I fixed the depth to 3 when I used it because it was too slow ). I did not create my own hueristic for the board evaluation heuristic instead I opted to using this heuristic. https://github.com/aiden200/chess_ai/blob/main/chess_engine/piece_values.py. Additionally to increase speed I added alpha beta pruning. 
 
 
+Running Program 
+
+Switch 0 off means you will be playing against the MINIMAX
+Switch 0 on means you will be playing against another real player 
+
+Switch 1 off means that the MINIMAX is black and you are white 
+Switch 1 on means that the MINIMAX is white and you are black 
+
+Control is done with mouse connected via usb 
+
+Button 2 and 3 are replacements for the mouse button. Can also sometimes work with mouse button but not as reliably 
+
+Button 1 resets the game 
+
+Button 0 restarts the software reestablishing a new usb connection and then restarting the game 
+
+If any changes are made to the IO switches Button 1 must be pressed to start a new game 
+
+Connecting to the fpga with COM will allow it to print the score the MINIMAX is giving to the board after it did its move 
+Black is MINI,  White is MAXI 
+
+Chess game has everything built in EXCEPT draw by repetition and draw by insufficient material  
+
+
 
 
