@@ -1,0 +1,145 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Thu Dec 12 12:54:18 2024
+# Process ID: 29384
+# Current directory: C:/Chess/ChessSpartan7
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent32744 C:\Chess\ChessSpartan7\ChessSpartan7.xpr
+# Log file: C:/Chess/ChessSpartan7/vivado.log
+# Journal file: C:/Chess/ChessSpartan7\vivado.jou
+# Running On: nikhil, OS: Windows, CPU Frequency: 2419 MHz, CPU Physical cores: 24, Host memory: 34053 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Chess/ChessSpartan7/ChessSpartan7.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Chess/hdmi_tx_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Chess/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'mbblock_i_hdmi_text_controller_0_0' generated file not found 'c:/Chess/ChessSpartan7/ChessSpartan7.gen/sources_1/bd/mbblock_i/ip/mbblock_i_hdmi_text_controller_0_0/mbblock_i_hdmi_text_controller_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'mbblock_i_hdmi_text_controller_0_0' generated file not found 'c:/Chess/ChessSpartan7/ChessSpartan7.gen/sources_1/bd/mbblock_i/ip/mbblock_i_hdmi_text_controller_0_0/mbblock_i_hdmi_text_controller_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'mbblock_i_hdmi_text_controller_0_0' generated file not found 'c:/Chess/ChessSpartan7/ChessSpartan7.gen/sources_1/bd/mbblock_i/ip/mbblock_i_hdmi_text_controller_0_0/mbblock_i_hdmi_text_controller_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'mbblock_i_hdmi_text_controller_0_0' generated file not found 'c:/Chess/ChessSpartan7/ChessSpartan7.gen/sources_1/bd/mbblock_i/ip/mbblock_i_hdmi_text_controller_0_0/mbblock_i_hdmi_text_controller_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'mbblock_i_hdmi_text_controller_0_0' generated file not found 'c:/Chess/ChessSpartan7/ChessSpartan7.gen/sources_1/bd/mbblock_i/ip/mbblock_i_hdmi_text_controller_0_0/mbblock_i_hdmi_text_controller_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'hdmi_tx_0' generated file not found 'c:/Chess/ChessSpartan7/ChessSpartan7.gen/sources_1/bd/mbblock_i/ip/mbblock_i_hdmi_text_controller_0_0/src/hdmi_tx_0_1/hdl/encode.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'hdmi_tx_0' generated file not found 'c:/Chess/ChessSpartan7/ChessSpartan7.gen/sources_1/bd/mbblock_i/ip/mbblock_i_hdmi_text_controller_0_0/src/hdmi_tx_0_1/hdl/serdes_10_to_1.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'hdmi_tx_0' generated file not found 'c:/Chess/ChessSpartan7/ChessSpartan7.gen/sources_1/bd/mbblock_i/ip/mbblock_i_hdmi_text_controller_0_0/src/hdmi_tx_0_1/hdl/srldelay.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'hdmi_tx_0' generated file not found 'c:/Chess/ChessSpartan7/ChessSpartan7.gen/sources_1/bd/mbblock_i/ip/mbblock_i_hdmi_text_controller_0_0/src/hdmi_tx_0_1/hdl/hdmi_tx_v1_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'hdmi_tx_0' generated file not found 'c:/Chess/ChessSpartan7/ChessSpartan7.gen/sources_1/bd/mbblock_i/ip/mbblock_i_hdmi_text_controller_0_0/src/hdmi_tx_0_1/synth/hdmi_tx_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'hdmi_tx_0' generated file not found 'c:/Chess/ChessSpartan7/ChessSpartan7.gen/sources_1/bd/mbblock_i/ip/mbblock_i_hdmi_text_controller_0_0/src/hdmi_tx_0_1/hdl/encode.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'hdmi_tx_0' generated file not found 'c:/Chess/ChessSpartan7/ChessSpartan7.gen/sources_1/bd/mbblock_i/ip/mbblock_i_hdmi_text_controller_0_0/src/hdmi_tx_0_1/hdl/serdes_10_to_1.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'hdmi_tx_0' generated file not found 'c:/Chess/ChessSpartan7/ChessSpartan7.gen/sources_1/bd/mbblock_i/ip/mbblock_i_hdmi_text_controller_0_0/src/hdmi_tx_0_1/hdl/srldelay.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'hdmi_tx_0' generated file not found 'c:/Chess/ChessSpartan7/ChessSpartan7.gen/sources_1/bd/mbblock_i/ip/mbblock_i_hdmi_text_controller_0_0/src/hdmi_tx_0_1/hdl/hdmi_tx_v1_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'hdmi_tx_0' generated file not found 'c:/Chess/ChessSpartan7/ChessSpartan7.gen/sources_1/bd/mbblock_i/ip/mbblock_i_hdmi_text_controller_0_0/src/hdmi_tx_0_1/sim/hdmi_tx_0.v'. Please regenerate to continue.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'mbblock_i.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+mbblock_i_hdmi_text_controller_0_0
+
+open_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1867.398 ; gain = 266.410
+update_compile_order -fileset sources_1
+reset_run mbblock_i_hdmi_text_controller_0_0_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: mbblock_i_hdmi_text_controller_0_0
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'C:/Chess/ChessSpartan7/ChessSpartan7.srcs/sources_1/bd/mbblock_i/ip/mbblock_i_hdmi_text_controller_0_0/mbblock_i_hdmi_text_controller_0_0.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Project 1-576] IP 'C:/Chess/ChessSpartan7/ChessSpartan7.srcs/sources_1/bd/mbblock_i/ip/mbblock_i_hdmi_text_controller_0_0/mbblock_i_hdmi_text_controller_0_0.xci' in run mbblock_i_hdmi_text_controller_0_0_synth_1 is locked, no out-of-context (OOC) run will be launched. The run may not be able to complete.
+Please select 'Report IP Status' from 'Tools/Report' or run the Tcl command 'report_ip_status' for more information.
+WARNING: [Project 1-576] IP 'C:/Chess/ChessSpartan7/ChessSpartan7.srcs/sources_1/bd/mbblock_i/ip/mbblock_i_hdmi_text_controller_0_0/mbblock_i_hdmi_text_controller_0_0.xci' in run mbblock_i_hdmi_text_controller_0_0_synth_1 is locked, no out-of-context (OOC) run will be launched. The run may not be able to complete.
+Please select 'Report IP Status' from 'Tools/Report' or run the Tcl command 'report_ip_status' for more information.
+[Thu Dec 12 12:54:40 2024] Launched mbblock_i_hdmi_text_controller_0_0_synth_1...
+Run output will be captured here: C:/Chess/ChessSpartan7/ChessSpartan7.runs/mbblock_i_hdmi_text_controller_0_0_synth_1/runme.log
+[Thu Dec 12 12:54:40 2024] Launched synth_1...
+Run output will be captured here: C:/Chess/ChessSpartan7/ChessSpartan7.runs/synth_1/runme.log
+open_bd_design {C:/Chess/ChessSpartan7/ChessSpartan7.srcs/sources_1/bd/mbblock_i/mbblock_i.bd}
+Reading block design file <C:/Chess/ChessSpartan7/ChessSpartan7.srcs/sources_1/bd/mbblock_i/mbblock_i.bd>...
+Adding component instance block -- xilinx.com:ip:microblaze:11.0 - microblaze_0
+Adding component instance block -- xilinx.com:ip:lmb_v10:3.0 - dlmb_v10
+Adding component instance block -- xilinx.com:ip:lmb_v10:3.0 - ilmb_v10
+Adding component instance block -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - dlmb_bram_if_cntlr
+Adding component instance block -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - ilmb_bram_if_cntlr
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - lmb_bram
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - microblaze_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_intc:4.1 - microblaze_0_axi_intc
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - microblaze_0_xlconcat
+Adding component instance block -- xilinx.com:ip:mdm:3.2 - mdm_1
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_1
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_clk_wiz_1_100M
+Adding component instance block -- xilinx.com:ip:axi_uartlite:2.0 - axi_uartlite_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - gpio_usb_rst
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - gpio_usb_int
+Adding component instance block -- xilinx.com:ip:axi_quad_spi:3.2 - spi_usb
+Adding component instance block -- xilinx.com:ip:axi_timer:2.0 - timer_usb_axi
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - frame_buffer
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - click
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - Player2
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - Player1Black
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - NewGame
+Adding component instance block -- xilinx.com:user:hdmi_text_controller:1.0 - hdmi_text_controller_0
+Successfully read diagram <mbblock_i> from block design file <C:/Chess/ChessSpartan7/ChessSpartan7.srcs/sources_1/bd/mbblock_i/mbblock_i.bd>
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:hdmi_text_controller:1.0 [get_ips  mbblock_i_hdmi_text_controller_0_0] -log ip_upgrade.log
+Upgrading 'C:/Chess/ChessSpartan7/ChessSpartan7.srcs/sources_1/bd/mbblock_i/mbblock_i.bd'
+INFO: [IP_Flow 19-3422] Upgraded mbblock_i_hdmi_text_controller_0_0 (hdmi_text_controller_v1.0 1.0) from revision 70 to revision 73
+Wrote  : <C:\Chess\ChessSpartan7\ChessSpartan7.srcs\sources_1\bd\mbblock_i\mbblock_i.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Chess/ChessSpartan7/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips mbblock_i_hdmi_text_controller_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Chess/ChessSpartan7/ChessSpartan7.srcs/sources_1/bd/mbblock_i/mbblock_i.bd]
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_1 clk_wiz propagate
+INFO: [xilinx.com:ip:axi_quad_spi:3.2-1] /spi_usb 
+                   #######################################################################################
+                   INFO: AXI Quad SPI core's AXI Lite Clock and EXT SPI CLK are synchronous to each other.
+                   ########################################################################################
+INFO: [xilinx.com:ip:axi_intc:4.1-1] /microblaze_0_axi_intc: The AXI INTC core has been configured to operate with synchronous clocks.
+Wrote  : <C:\Chess\ChessSpartan7\ChessSpartan7.srcs\sources_1\bd\mbblock_i\mbblock_i.bd> 
+Verilog Output written to : c:/Chess/ChessSpartan7/ChessSpartan7.gen/sources_1/bd/mbblock_i/synth/mbblock_i.v
+Verilog Output written to : c:/Chess/ChessSpartan7/ChessSpartan7.gen/sources_1/bd/mbblock_i/sim/mbblock_i.v
+Verilog Output written to : c:/Chess/ChessSpartan7/ChessSpartan7.gen/sources_1/bd/mbblock_i/hdl/mbblock_i_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_text_controller_0 .
+Exporting to file c:/Chess/ChessSpartan7/ChessSpartan7.gen/sources_1/bd/mbblock_i/hw_handoff/mbblock_i.hwh
+Generated Hardware Definition File c:/Chess/ChessSpartan7/ChessSpartan7.gen/sources_1/bd/mbblock_i/synth/mbblock_i.hwdef
+generate_target: Time (s): cpu = 00:00:04 ; elapsed = 00:00:20 . Memory (MB): peak = 2644.473 ; gain = 350.059
+catch { config_ip_cache -export [get_ips -all mbblock_i_hdmi_text_controller_0_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: mbblock_i_hdmi_text_controller_0_0
+export_ip_user_files -of_objects [get_files C:/Chess/ChessSpartan7/ChessSpartan7.srcs/sources_1/bd/mbblock_i/mbblock_i.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Chess/ChessSpartan7/ChessSpartan7.srcs/sources_1/bd/mbblock_i/mbblock_i.bd]
+launch_runs mbblock_i_hdmi_text_controller_0_0_synth_1 -jobs 16
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: mbblock_i_hdmi_text_controller_0_0
+[Thu Dec 12 12:57:14 2024] Launched mbblock_i_hdmi_text_controller_0_0_synth_1...
+Run output will be captured here: C:/Chess/ChessSpartan7/ChessSpartan7.runs/mbblock_i_hdmi_text_controller_0_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Chess/ChessSpartan7/ChessSpartan7.srcs/sources_1/bd/mbblock_i/mbblock_i.bd] -directory C:/Chess/ChessSpartan7/ChessSpartan7.ip_user_files/sim_scripts -ip_user_files_dir C:/Chess/ChessSpartan7/ChessSpartan7.ip_user_files -ipstatic_source_dir C:/Chess/ChessSpartan7/ChessSpartan7.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Chess/ChessSpartan7/ChessSpartan7.cache/compile_simlib/modelsim} {questa=C:/Chess/ChessSpartan7/ChessSpartan7.cache/compile_simlib/questa} {riviera=C:/Chess/ChessSpartan7/ChessSpartan7.cache/compile_simlib/riviera} {activehdl=C:/Chess/ChessSpartan7/ChessSpartan7.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+[Thu Dec 12 12:58:38 2024] Launched synth_1...
+Run output will be captured here: C:/Chess/ChessSpartan7/ChessSpartan7.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+[Thu Dec 12 12:59:27 2024] Launched synth_1...
+Run output will be captured here: C:/Chess/ChessSpartan7/ChessSpartan7.runs/synth_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Thu Dec 12 13:00:22 2024] Launched impl_1...
+Run output will be captured here: C:/Chess/ChessSpartan7/ChessSpartan7.runs/impl_1/runme.log
+write_hw_platform -fixed -include_bit -force -file C:/Chess/ChessSpartan7/ChessHardware.xsa
+INFO: [Project 1-1918] Creating Hardware Platform: C:/Chess/ChessSpartan7/ChessHardware.xsa ...
+INFO: [Project 1-1943] The Hardware Platform can be used for Hardware
+INFO: [Project 1-1941] Successfully created Hardware Platform: C:/Chess/ChessSpartan7/ChessHardware.xsa
+INFO: [Hsi 55-2053] elapsed time for repository (C:/Xilinx/Vivado/2022.2/data/embeddedsw) loading 0 seconds
+open_bd_design {C:/Chess/ChessSpartan7/ChessSpartan7.srcs/sources_1/bd/mbblock_i/mbblock_i.bd}
+open_bd_design {C:/Chess/ChessSpartan7/ChessSpartan7.srcs/sources_1/bd/mbblock_i/mbblock_i.bd}
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 13 15:51:45 2024...

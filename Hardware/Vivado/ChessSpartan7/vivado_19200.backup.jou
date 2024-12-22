@@ -1,0 +1,146 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sun Dec  8 12:31:21 2024
+# Process ID: 19200
+# Current directory: C:/Chess/ChessSpartan7
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18292 C:\Chess\ChessSpartan7\ChessSpartan7.xpr
+# Log file: C:/Chess/ChessSpartan7/vivado.log
+# Journal file: C:/Chess/ChessSpartan7\vivado.jou
+# Running On: nikhil, OS: Windows, CPU Frequency: 2419 MHz, CPU Physical cores: 24, Host memory: 34053 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Chess/ChessSpartan7/ChessSpartan7.xpr
+open_bd_design {C:/Chess/ChessSpartan7/ChessSpartan7.srcs/sources_1/bd/mbblock_i/mbblock_i.bd}
+update_compile_order -fileset sources_1
+set_property location {5 1640 637} [get_bd_cells click]
+startgroup
+set_property CONFIG.C_ALL_INPUTS {1} [get_bd_cells click]
+delete_bd_objs [get_bd_nets click_gpio_io_o]
+endgroup
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins click/GPIO]
+endgroup
+set_property name click [get_bd_intf_ports GPIO_0]
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+open_run synth_1 -name synth_1
+open_bd_design {C:/Chess/ChessSpartan7/ChessSpartan7.srcs/sources_1/bd/mbblock_i/mbblock_i.bd}
+startgroup
+set_property CONFIG.C_ALL_INPUTS {0} [get_bd_cells click]
+endgroup
+save_bd_design
+reset_run synth_1
+reset_run mbblock_i_axi_gpio_0_3_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+close_bd_design [get_bd_designs mbblock_i]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+write_hw_platform -fixed -include_bit -force -file C:/Chess/ChessSpartan7/ChessHardware.xsa
+open_bd_design {C:/Chess/ChessSpartan7/ChessSpartan7.srcs/sources_1/bd/mbblock_i/mbblock_i.bd}
+startgroup
+set_property CONFIG.COUNT_WIDTH {8} [get_bd_cells timer_usb_axi]
+endgroup
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+reset_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+open_bd_design {C:/Chess/ChessSpartan7/ChessSpartan7.srcs/sources_1/bd/mbblock_i/mbblock_i.bd}
+startgroup
+set_property CONFIG.C_ALL_INPUTS {1} [get_bd_cells click]
+endgroup
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+open_bd_design {C:/Chess/ChessSpartan7/ChessSpartan7.srcs/sources_1/bd/mbblock_i/mbblock_i.bd}
+delete_bd_objs [get_bd_ports click]
+delete_bd_objs [get_bd_intf_nets click_GPIO] [get_bd_intf_ports click]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_intf_pins click/GPIO]
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+write_hw_platform -fixed -include_bit -force -file C:/Chess/ChessSpartan7/ChessHardware.xsa
+startgroup
+set_property CONFIG.COUNT_WIDTH {32} [get_bd_cells timer_usb_axi]
+endgroup
+save_bd_design
+reset_run synth_1
+reset_run mbblock_i_axi_timer_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+write_hw_platform -fixed -include_bit -force -file C:/Chess/ChessSpartan7/ChessHardware.xsa
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Chess/ChessSpartan7/ChessSpartan7.srcs/sources_1/bd/mbblock_i/mbblock_i.bd]
+refresh_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+close_design
+write_hw_platform -fixed -include_bit -force -file C:/Chess/ChessSpartan7/ChessHardware.xsa
+write_hw_platform -fixed -include_bit -force -file C:/Chess/ChessSpartan7/ChessHardware.xsa
+open_bd_design {C:/Chess/ChessSpartan7/ChessSpartan7.srcs/sources_1/bd/mbblock_i/mbblock_i.bd}
+open_run synth_1 -name synth_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Chess/ChessSpartan7/ChessSpartan7.srcs/sources_1/bd/mbblock_i/mbblock_i.bd]
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Chess/ChessSpartan7/ChessSpartan7.srcs/sources_1/bd/mbblock_i/mbblock_i.bd]
+refresh_design
+open_bd_design {C:/Chess/ChessSpartan7/ChessSpartan7.srcs/sources_1/bd/mbblock_i/mbblock_i.bd}
+delete_bd_objs [get_bd_intf_nets click_GPIO] [get_bd_intf_ports gpio_rtl_0]
+startgroup
+make_bd_pins_external  [get_bd_pins click/gpio_io_i]
+endgroup
+save_bd_design
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+current_design synth_1
+close_design
+open_run synth_1 -name synth_1
+current_design rtl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Chess/ChessSpartan7/ChessSpartan7.srcs/sources_1/bd/mbblock_i/mbblock_i.bd]
+refresh_design
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Chess/ChessSpartan7/ChessSpartan7.srcs/sources_1/bd/mbblock_i/mbblock_i.bd]
+refresh_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+write_hw_platform -fixed -include_bit -force -file C:/Chess/ChessSpartan7/Chesshardware.xsa
+create_project DDR3 C:/DDR3/DDR3 -part xc7s50csga324-1
+add_files -norecurse -scan_for_includes C:/Users/nvswe/Downloads/urbana_ddr3_provided/mb_ddr3_top.sv
+import_files -force -norecurse
+import_files -fileset constrs_1 -force -norecurse C:/Users/nvswe/Downloads/urbana_ddr3_provided/urbana_ddr3.xdc
+update_compile_order -fileset sources_1

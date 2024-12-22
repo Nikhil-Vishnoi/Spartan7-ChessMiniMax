@@ -1,0 +1,21 @@
+vhdl xil_defaultlib  \
+"../../../bd/mbblock_i/ip/mbblock_i_microblaze_0_0/sim/mbblock_i_microblaze_0_0.vhd" \
+"../../../bd/mbblock_i/ip/mbblock_i_dlmb_v10_0/sim/mbblock_i_dlmb_v10_0.vhd" \
+"../../../bd/mbblock_i/ip/mbblock_i_ilmb_v10_0/sim/mbblock_i_ilmb_v10_0.vhd" \
+"../../../bd/mbblock_i/ip/mbblock_i_dlmb_bram_if_cntlr_0/sim/mbblock_i_dlmb_bram_if_cntlr_0.vhd" \
+"../../../bd/mbblock_i/ip/mbblock_i_ilmb_bram_if_cntlr_0/sim/mbblock_i_ilmb_bram_if_cntlr_0.vhd" \
+"../../../bd/mbblock_i/ip/mbblock_i_microblaze_0_axi_intc_0/sim/mbblock_i_microblaze_0_axi_intc_0.vhd" \
+"../../../bd/mbblock_i/ip/mbblock_i_mdm_1_0/sim/mbblock_i_mdm_1_0.vhd" \
+"../../../bd/mbblock_i/ip/mbblock_i_rst_clk_wiz_1_100M_0/sim/mbblock_i_rst_clk_wiz_1_100M_0.vhd" \
+"../../../bd/mbblock_i/ip/mbblock_i_axi_uartlite_0_0/sim/mbblock_i_axi_uartlite_0_0.vhd" \
+"../../../bd/mbblock_i/ip/mbblock_i_axi_gpio_0_0/sim/mbblock_i_axi_gpio_0_0.vhd" \
+"../../../bd/mbblock_i/ip/mbblock_i_axi_gpio_0_1/sim/mbblock_i_axi_gpio_0_1.vhd" \
+"../../../bd/mbblock_i/ip/mbblock_i_axi_quad_spi_0_0/sim/mbblock_i_axi_quad_spi_0_0.vhd" \
+"../../../bd/mbblock_i/ip/mbblock_i_axi_timer_0_0/sim/mbblock_i_axi_timer_0_0.vhd" \
+"../../../bd/mbblock_i/ip/mbblock_i_axi_gpio_0_2/sim/mbblock_i_axi_gpio_0_2.vhd" \
+"../../../bd/mbblock_i/ip/mbblock_i_axi_gpio_0_3/sim/mbblock_i_axi_gpio_0_3.vhd" \
+"../../../bd/mbblock_i/ip/mbblock_i_axi_gpio_0_4/sim/mbblock_i_axi_gpio_0_4.vhd" \
+"../../../bd/mbblock_i/ip/mbblock_i_axi_gpio_0_5/sim/mbblock_i_axi_gpio_0_5.vhd" \
+"../../../bd/mbblock_i/ip/mbblock_i_axi_gpio_0_6/sim/mbblock_i_axi_gpio_0_6.vhd" \
+
+nosort
